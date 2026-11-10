@@ -1,28 +1,34 @@
 package taller5;
 
-import javax.swing.JOptionPane;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
+public class Estudiante {
 
-/**
- * Ejercicio 5 - Clase Estudiante + JOptionPane + BufferedReader
- *
- * El main usa la clase Estudiante (Ejercicio5 combina ambas formas de E/S):
- *  - nombre y edad con JOptionPane
- *  - notas con BufferedReader
- */
-public class Ejercicio5 {
+    private String nombre;
+    private int edad;
+    private double nota1;
+    private double nota2;
+    private double nota3;
 
-    public static void main(String[] args) throws IOException {
-        // TODO:
-        // 1. Pedir nombre con JOptionPane.showInputDialog
-        // 2. Pedir edad con JOptionPane.showInputDialog + Integer.parseInt
-        // 3. Leer tres notas con BufferedReader + Double.parseDouble
-        // 4. Crear objeto Estudiante con el constructor
-        // 5. Mostrar con JOptionPane.showMessageDialog EXACTO:
-        //      Nombre: [nombre]
-        //      Edad: [edad]
-        //      Promedio: X.XX
+    public Estudiante(String nombre, int edad, double nota1, double nota2, double nota3) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
+    }
+
+    public String getNombre() { return nombre; }
+    public int getEdad() { return edad; }
+    public double getNota1() { return nota1; }
+    public double getNota2() { return nota2; }
+    public double getNota3() { return nota3; }
+
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public void setEdad(int edad) { this.edad = edad; }
+    public void setNota1(double nota1) { this.nota1 = nota1; }
+    public void setNota2(double nota2) { this.nota2 = nota2; }
+    public void setNota3(double nota3) { this.nota3 = nota3; }
+
+    public double getPromedio() {
+        return (nota1 + nota2 + nota3) / 3.0;
     }
 }
